@@ -25,7 +25,7 @@ Follow these steps to run the project locally.
 1. Clone the repository:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/2003devansh/fastor_assingment.git
 cd fastor_assignment
 ```
 
