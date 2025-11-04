@@ -60,14 +60,14 @@ npx prisma db push
 
 ## API Workflow
 
-| Step      | Method | Path                       | Action             | Headers/Body Details                                               |
-| --------- | ------ | -------------------------- | ------------------ | ------------------------------------------------------------------ |
-| Auth      | POST   | `/api/auth/register`       | Create Employee    | `{"email": "a@crm.com", "password": "pass"}`                       |
-| Auth      | POST   | `/api/auth/login`          | Login & Get Token  | `{"email": "a@crm.com", "password": "pass"}`                       |
-| Public    | POST   | `/api/enquiries/public`    | Submit Lead        | `{"name": "Client Sam", "email": "sam@test.com", "course": "MBA"}` |
-| Protected | GET    | `/api/enquiries/unclaimed` | View Public Leads  | Header: `Authorization: Bearer <Token>`                            |
-| Protected | PATCH  | `/api/enquiries/1/claim`   | Claim Lead         | Header: `Authorization: Bearer <Token>`                            |
-| Protected | GET    | `/api/enquiries/claimed`   | View Private Leads | Header: `Authorization: Bearer <Token>`                            |
+| Step      | Method | Path                 | Action             | Headers/Body Details                                               |
+| --------- | ------ | -------------------- | ------------------ | ------------------------------------------------------------------ |
+| Auth      | POST   | `/auth/register`     | Create Employee    | `{"email": "a@crm.com", "password": "pass"}`                       |
+| Auth      | POST   | `/auth/login`        | Login & Get Token  | `{"email": "a@crm.com", "password": "pass"}`                       |
+| Public    | POST   | `/enquiry/public`    | Submit Lead        | `{"name": "Client Sam", "email": "sam@test.com", "course": "MBA"}` |
+| Protected | GET    | `/enquiry/unclaimed` | View Public Leads  | Header: `Authorization: Bearer <Token>`                            |
+| Protected | PATCH  | `/enquiry/:id/claim` | Claim Lead         | Header: `Authorization: Bearer <Token>`                            |
+| Protected | GET    | `/enquiry/claimed`   | View Private Leads | Header: `Authorization: Bearer <Token>`                            |
 
 ------------------END
 
