@@ -87,7 +87,6 @@ project-root
 │   │   ├── utils
 │   │   └── App.tsx
 │
-└── README.md
 ```
 
 ---
