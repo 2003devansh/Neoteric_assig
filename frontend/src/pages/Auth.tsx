@@ -15,7 +15,6 @@ export default function Auth() {
   const navigate = useNavigate();
 
   //   console.log("rtfgyhjkl", localStorage.getItem("token"));
-  // LOGIN
   const handleLogin = async () => {
     setLoading(true);
 
@@ -45,7 +44,6 @@ export default function Auth() {
     }
   };
 
-  // REGISTER
   const handleRegister = async () => {
     setLoading(true);
 
@@ -90,7 +88,6 @@ export default function Auth() {
           }}
           centered
         >
-          {/* LOGIN */}
           <Tabs.TabPane tab="Login" key="login">
             <Input
               placeholder="Email"
@@ -126,7 +123,6 @@ export default function Auth() {
             </p>
           </Tabs.TabPane>
 
-          {/* REGISTER */}
           <Tabs.TabPane tab="Register" key="register">
             <Input
               placeholder="Email"
