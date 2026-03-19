@@ -12,7 +12,6 @@ export default function Leads() {
 
   const token = localStorage.getItem("token");
 
-  // FETCH LEADS
   const fetchLeads = async () => {
     try {
       const res = await fetch(`${BASE_URL}/leads`, {
@@ -41,7 +40,6 @@ export default function Leads() {
     fetchLeads();
   }, []);
 
-  // ADD LEAD
   const addLead = async () => {
     if (!name) {
       message.warning("Enter lead name");
@@ -70,7 +68,6 @@ export default function Leads() {
     }
   };
 
-  // UPDATE STATUS
   const updateStatus = async (id: string, status: string) => {
     try {
       await fetch(`${BASE_URL}/leads/${id}/status`, {
@@ -93,7 +90,6 @@ export default function Leads() {
       <Navbar />
 
       <div className="p-6 max-w-5xl mx-auto">
-        {/* Add Lead */}
         <div className="flex gap-2 mb-4">
           <Input
             placeholder="Lead name"
@@ -106,7 +102,6 @@ export default function Leads() {
           </Button>
         </div>
 
-        {/* Leads Table */}
         <Table
           dataSource={leads}
           rowKey="id"
